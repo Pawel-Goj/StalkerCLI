@@ -25,5 +25,5 @@ source .venv/bin/activate
 # 4. Install it locally in editable mode
 pip install --editable .
 
-Once installed, just type this command anywhere in your terminal to fire up the dashboard:
+# 5. Once installed, just type this command anywhere in your terminal to fire up the dashboard:
 stalker
