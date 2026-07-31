@@ -8,7 +8,7 @@ from rich.table import Table
 from rich.text import Text
 
 GITHUB_USER = "Pawel-Goj"
-GITHUB_REPO = "Pico-Threat-Monitor"
+GITHUB_REPO = "StalkerCLI"
 
 
 def get_cpu_usage():
@@ -114,9 +114,8 @@ def generate_dashboard():
     return layout
 
 
-if __name__ == "__main__":
+def main():
     psutil.cpu_percent(interval=None)
-
     with Live(generate_dashboard(), refresh_per_second=2, screen=True) as live:
         try:
             while True:
@@ -124,3 +123,6 @@ if __name__ == "__main__":
                 live.update(generate_dashboard())
         except KeyboardInterrupt:
             pass
+
+if __name__ == "__main__":
+    main()
